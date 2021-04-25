@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
     <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="app-wrapp">
       <header>
         <input
           type="text"
+          id="city-input"
           autocomplete="off"
           class="search-box"
           placeholder="search a city..."
@@ -19,12 +21,12 @@
       </header>
       <main>
         <section class="location">
-          <div class="city">london,GB</div>
-          <div class="date">Thursday Jan 2020</div>
+          <div class="city" id="city">london,GB</div>
+          <div class="date" id="date">Thursday Jan 2020</div>
         </section>
         <div class="current">
-          <div class="temp">15 <span>C</span></div>
-          <div class="weather">Sunny</div>
+          <div class="temp" id="temperature">15 <span>C</span></div>
+          <div class="weather" id="description">Sunny</div>
         </div>
       </main>
     </div>
